@@ -1,6 +1,6 @@
 # Portfolio Template (vue3+tailwindcss)
 
-# Demo
+# Live demo
 https://portfoliotemplatedemo.netlify.app/
 
 This template should help get you started developing with Vue 3 in Vite.
