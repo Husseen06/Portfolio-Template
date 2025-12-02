@@ -1,36 +1,33 @@
 <script setup>
-const name = 'Husseen Aden'
-const profession = 'Front-End Developer'
-const location = 'Rotterdam, The Netherlands'
-const resumeLink = '../assets/HusseenAden_Resume.pdf'
+import summaryImage from '../assets/placeholder-2-1.webp'
+const title = 'Frontend Developer'
+const imageUrl = summaryImage
+const location = 'City, Country'
+const resumeLink = '#'
 </script>
 
 <template>
-  <section class="max-w-4xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
+  <section
+    id="home"
+    class="max-w-5xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10 bg-blue-50 rounded-xl shadow-lg"
+  >
     <div class="flex-1 text-center md:text-left">
-      <h1 class="text-4xl font-bold mb-4 text-gray-800">
-        {{ name }}
-      </h1>
-      <h2 class="text-2xl font-semibold mb-2 text-gray-600">
-        {{ profession }}
-      </h2>
-      <p class="text-lg text-gray-600 mb-4">
-        {{ location }}
-      </p>
+      <h1 class="text-5xl font-bold mb-4 text-gray-800">Portfolio</h1>
+      <h2 class="text-2xl font-semibold mb-2 text-blue-800">{{ title }}</h2>
+      <p class="text-lg mb-6 text-blue-700">{{ location }}</p>
       <a
         :href="resumeLink"
         download
-        class="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300"
+        class="inline-block mt-4 px-8 py-3 bg-blue-500 text-white font-semibold rounded-full shadow hover:bg-blue-600 transition-colors duration-300"
       >
         Download Resume
       </a>
     </div>
-
-    <div class="shrink-0">
+    <div class="flex-shrink-0">
       <img
-        src="../assets/placeholder-2-1.webp"
-        alt="Profielfoto"
-        class="h-48 w-48 rounded-4xl object-cover shadow-lg border border-gray-200"
+        :src="imageUrl"
+        alt="Profile Picture"
+        class="h-48 w-48 md:h-56 md:w-56 rounded-full object-cover shadow-xl border-4 border-blue-200"
       />
     </div>
   </section>

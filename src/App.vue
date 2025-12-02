@@ -9,9 +9,18 @@ import SummaryItem from './components/SummaryItem.vue'
 
 <template>
   <Navbar />
-  <SummaryItem />
-  <About />
-  <Skills />
-  <Project />
-  <Contact />
+  <main class="mt-16">
+    <SummaryItem />
+    <About />
+    <Skills />
+    <Project />
+    <Contact />
+  </main>
 </template>
+
+<style>
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* 16 (h-16 on navbar) * 0.25rem = 4rem */
+}
+</style>
